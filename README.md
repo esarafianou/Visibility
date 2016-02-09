@@ -8,14 +8,14 @@ execute: java Visibility
 
 
 example: 
-for input 
+for input  
 7  
 1 1 3 3 6.0  
 5 1 7 3 6.0  
 9 1 11 3 6.0  
 1 4 3 6 6.0  
 5 4 7 6 6.0  
-9 4 11 6 6.0 
+9 4 11 6 6.0  
 1 7 11 8 3.25  
 
 the output is 4.
