@@ -67,7 +67,6 @@ let rec takeAllX buildings res=
     | h::t -> let current=h in
     let xsw=List.nth current 0 in
     let xne=List.nth current 2 in
-    (*takeAllX t (xsw::xne::res) *)
     takeAllX t (xsw::([xne]@res)) 
 ;;
 
@@ -109,7 +108,7 @@ let rec dofinalwork buildings uniqueXlist counter =
     let xne=List.nth (getfirsts h) 2 in
     let left=Hashtbl.find ht xsw in
     let right=Hashtbl.find ht xne in
-    let resflag= tempfunct h  left right 0 in (*to teleytaio orisma einai to flag*)
+    let resflag= tempfunct h  left right 0 in (*the last one is the flag*)
     if (resflag==1) then dofinalwork t uniqueXlist (counter+1)
     else dofinalwork t uniqueXlist counter
 ;;
@@ -120,8 +119,8 @@ let danger =
     let input = parse Sys.argv.(1) in
     let buildings = getsecond input in
     let allxlist = takeAllX buildings [] in 
-    let allxlist = List.sort compa allxlist in    (* lista sortarismeni me oola ta xsw,xne *)
-    let uniqueXlist = makeuniqueX allxlist [List.hd allxlist] in  (*list me ola ta diakrita xsw,xne *)
+    let allxlist = List.sort compa allxlist in    (* sorted list with all Xsw,Xne *)
+    let uniqueXlist = makeuniqueX allxlist [List.hd allxlist] in  (*list with all discrete Χsw,Χne *)
     let () = createhashtable uniqueXlist 1 in
     let heights= getthird input in
     let buildings = myunionfunc buildings heights [] in
