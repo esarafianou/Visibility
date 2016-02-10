@@ -14,7 +14,7 @@ execute: java Visibility map.txt
  or by using eclipse
 
 for OCaml program: 
-compile: ocamlc -o visable visable.ml 
+compile: ocamlc -o visable visable.ml  
 execute: ./visable "map.txt"
 
 example: 
