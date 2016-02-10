@@ -4,7 +4,7 @@ finds how many of them are visable from an observator in the south side of the m
 
 In detail, the program reads an integer N, which is the number of the buildings in the map, and for the next N lines reads the 4 corner coordinates for each building: southwestX, southwestY, northeastX, northeastY and the height of each building.
 For an observer in the south side of the map, the program outputs how many buildings he can see, regardless of point from
-which he looks. This means,he can see a building which is further north than others but is higher or an other which is closer to him.
+which he looks. This means,he can see a building which is further north than others but is higher or another which is closer to him.
 
 Written in Java and OCaml 
 
@@ -14,7 +14,7 @@ execute: java Visibility map.txt
  or by using eclipse
 
 for OCaml program: 
-compile: ocamlc -o visable visable.ml
+compile: ocamlc -o visable visable.ml 
 execute: ./visable "map.txt"
 
 example: 
