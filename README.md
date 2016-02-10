@@ -30,3 +30,4 @@ map.txt
 1 7 11 8 3.25  
 
 The output is 4.
+
